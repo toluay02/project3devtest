@@ -1,0 +1,9 @@
+export TYPEORM_CONNECTION=postgress
+export TYPEORM_DATABASE=project3devops
+export TYPEORM_ENTITIES=./src/modules/domain/**/*.entity.ts
+export TYPEORM_HOST=project3devops.ctrfhnut1ifl.us-east-1.rds.amazonaws.com
+export TYPEORM_MIGRATIONS=./src/migrations/*.ts
+export TYPEORM_MIGRATIONS_DIR=./src/migrations
+export TYPEORM_PASSWORD=project3devops
+export TYPEORM_PORT=5432
+export TYPEORM_USERNAME=project3devops

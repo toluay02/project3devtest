@@ -1,0 +1,44 @@
+---
+- name: "show remote environment"
+  shell: env
+  
+- name: "update apt packages."
+  become: yes
+  apt:
+    update_cache: true
+
+- name: "upgrade packages"
+  become: yes
+  apt:
+    upgrade: true
+
+- name: "remove dependencies that are no longer required"
+  become: yes
+  apt:
+    autoremove: true
+
+- name: "install nodejs and npm"
+  become: yes
+  apt:
+    name: ["nodejs", "npm"]
+    state: latest
+    update_cache: true
+
+- name: "install n"
+  become: yes
+  npm:
+    name: n
+    global: true
+    production: true
+
+- name: "install nodejs 13.8.0"
+  become: yes
+  shell: n 13.8.0
+
+- name: "install pm2"
+  become: yes
+  npm:
+    name: pm2
+    global: true
+    production: true
+    state: present
